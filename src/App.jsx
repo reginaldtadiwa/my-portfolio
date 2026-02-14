@@ -115,12 +115,12 @@ const CloseMenu = ({ size = 24, className = "" }) => (
 const projects = [
   {
     id: 1,
-    title: "Building Payment Infrastructure",
+    title: "Simple Payment Kit",
     description:
-      "Deliver end-to-end OneMoney integrations with merchants, banks, and payment networks, enabling wallet-bank transfers, POS acceptance and fund disbursements",
+      "Plug-and-play OneMoney payment solution. Minimal setup, highly customizable, perfect for e-commerce stores, marketplaces, and platforms. Simple integration, powerful flexibility, instant deployment.",
     image:
-      "https://scontent-jnb2-1.cdninstagram.com/v/t39.30808-6/612239496_1309853034520649_1879133359085787814_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MzgwNDEwOTYzNzYxMjgyMDUwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=PFtFc4rV1PkQ7kNvwE_w-wA&_nc_oc=AdksL5VfjN098Iv_NFGmMfU74QOs-RNatE-LCk7K0nLapVSNV9VuWZQlvlNHYEcQsM0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-jnb2-1.cdninstagram.com&_nc_gid=8yw4cMy_yCA5PnEAP5aViA&oh=00_AfuCcDBmBJmg6Ry_aHEXA9dqiVtIaLuhaG9zPFluP0bCyw&oe=698CA9C0",
-    tags: ["ISO8583", "SOAP", "REST APIs"],
+      "https://img.freepik.com/free-photo/mobile-payment-technology_23-2151961280.jpg?t=st=1771069190~exp=1771072790~hmac=844281fabba33c0e4f5edc6e0b21a6b767ae1e4230da588dbc0df7a60ad9ee15&w=1480",
+    tags: ["Python", "SQLite", "REST"],
     // Additional details for the project detail page
     detailedDescription: [
       "Led the development of a comprehensive payment infrastructure system that processes over 100,000 transactions daily with 99.99% uptime.",
@@ -146,7 +146,7 @@ const projects = [
       "RabbitMQ",
     ],
     images: [
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      "https://scontent-jnb2-1.cdninstagram.com/v/t39.30808-6/612239496_1309853034520649_1879133359085787814_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MzgwNDEwOTYzNzYxMjgyMDUwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=PFtFc4rV1PkQ7kNvwE_w-wA&_nc_oc=AdksL5VfjN098Iv_NFGmMfU74QOs-RNatE-LCk7K0nLapVSNV9VuWZQlvlNHYEcQsM0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-jnb2-1.cdninstagram.com&_nc_gid=8yw4cMy_yCA5PnEAP5aViA&oh=00_AfuCcDBmBJmg6Ry_aHEXA9dqiVtIaLuhaG9zPFluP0bCyw&oe=698CA9C0",
       "https://images.unsplash.com/photo-16180446125-6c8c4c0d5a8d?w-800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
     ],
@@ -159,12 +159,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Enterprise CRM System",
+    title: "Pneumoconiosis Detection System",
     description:
-      "Built a comprehensive customer relationship management system with third-party integrations including ERPNext, and custom webhooks for real-time data synchronization.",
+      "An automated system that scans chest X-ray image batches and generates reports identifying individuals likely to have pneumoconiosis",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    tags: ["React", "Node.js", "PostgreSQL"],
+      "https://img.freepik.com/free-photo/medic-holding-radiography-examination-with-patient-coronavirus-pandemic-doctor-explaining-x-ray-scan-results-diagnosis-woman-wearing-face-masks-protection_482257-42641.jpg?t=st=1771070627~exp=1771074227~hmac=1dd3b3522673b5b97ed6a5957b2adba2e7fe7fbd8cba6f494540b143553b60ec&w=1060",
+    tags: ["Celery", "Redis", "PostgreSQL"],
     detailedDescription: [
       "Developed a full-stack CRM solution serving over 5,000 users across multiple departments.",
       "Integrated with ERPNext for seamless data synchronization between CRM and ERP systems.",
@@ -202,12 +202,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "API Orchestration Platform",
+    title: "Carpooling Application",
     description:
-      "Developed a microservices orchestration layer that connects 20+ internal and external APIs, reducing integration time by 60% and improving system reliability.",
+      "A smart carpooling application that matches drivers and passengers heading the same way—saving money, reducing traffic, cutting emissions, and building community through shared daily commutes.",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-    tags: ["Microservices", "Docker", "Kubernetes"],
+      "https://img.freepik.com/free-photo/mobile-app-location-digital-art_23-2151762839.jpg?t=st=1771068967~exp=1771072567~hmac=370ba06cfc5e605aa20de4d78a227d415d99f665f2fbe9c793f0ae977a969fca&w=1480",
+    tags: ["React Native", "DJANGO", "PostgreSQL"],
     detailedDescription: [
       "Architected and built an API orchestration platform that manages communication between 20+ microservices.",
       "Implemented circuit breaker pattern for improved fault tolerance and system resilience.",
