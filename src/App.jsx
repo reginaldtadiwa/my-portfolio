@@ -8,6 +8,13 @@ import {
 } from "react-router-dom";
 import ProjectDetail from "./ProjectDetail";
 import "./App.css";
+import paybridge from "./assets/paybridge.png";
+import pinprompt from "./assets/pinprompt.jpg";
+import receipt from "./assets/receipt.jpeg";
+import results from "./assets/results.png";
+import upload from "./assets/upload.jpg";
+import worker from "./assets/worker.png";
+import carpooling from "./assets/test.png";
 
 // Custom SVG Icons (keep all your existing icon components)
 const Github = ({ size = 24 }) => (
@@ -115,45 +122,23 @@ const CloseMenu = ({ size = 24, className = "" }) => (
 const projects = [
   {
     id: 1,
-    title: "Simple Payment Kit",
+    title: "OneMoney Checkout Plugin - PayBridge",
     description:
-      "Plug-and-play OneMoney payment solution. Minimal setup, highly customizable, perfect for e-commerce stores, marketplaces, and platforms. Simple integration, powerful flexibility, instant deployment.",
+      "PayBridge is a lightweight Python plugin that simplifies OneMoney payment integration, enabling merchant technical teams to embed a fully functional checkout experience with minimal configuration",
     image:
       "https://img.freepik.com/free-photo/mobile-payment-technology_23-2151961280.jpg?t=st=1771069190~exp=1771072790~hmac=844281fabba33c0e4f5edc6e0b21a6b767ae1e4230da588dbc0df7a60ad9ee15&w=1480",
     tags: ["Python", "SQLite", "REST"],
     // Additional details for the project detail page
     detailedDescription: [
-      "Led the development of a comprehensive payment infrastructure system that processes over 100,000 transactions daily with 99.99% uptime.",
-      "Integrated with multiple banks and financial institutions using ISO8583 protocol for real-time transaction processing.",
-      "Built RESTful APIs for merchants to connect with our payment gateway, reducing integration time from weeks to days.",
-      "Implemented SOAP-based web services for enterprise clients requiring secure and reliable payment processing.",
-      "Developed a real-time monitoring dashboard with analytics for transaction tracking and fraud detection.",
+      "PayBridge is a lightweight, plug-and-play Python plugin that enables merchant technical teams to seamlessly integrate OneMoney payments into their web applications with minimal effort. Built with developer experience at its core, PayBridge abstracts away the complexity of payment gateway integration, so developers can go from setup to accepting payments in minutes, not days",
     ],
     challenges: [
-      "Ensuring PCI-DSS compliance across all payment processing components",
-      "Maintaining sub-second response times during peak transaction periods",
-      "Handling reconciliation with multiple banking partners with different formats",
+      "Abstracting API Complexity Without Losing Flexibility - OneMoney's underlying API is particularly demanding involving RSA and AES encryption, SHA-256 data signing, and a strict authentication flow. The core challenge was building an abstraction layer that silently handled all this cryptographic complexity under the hood, while still giving developers the flexibility to customize behavior without ever touching the encryption logic directly.",
+      "Handling Asynchronous Payment Callbacks Reliably - Payment flows are rarely linear. Handling webhook or callback notifications from OneMoney, especially in scenarios involving network failures, duplicate notifications, or delayed responses required building a robust and idempotent callback handling mechanism that merchants could depend on in production environments without data inconsistency risks",
     ],
-    technologies: [
-      "Java Spring Boot",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "Kubernetes",
-      "ISO8583 Library",
-      "SOAP Web Services",
-      "REST APIs",
-      "RabbitMQ",
-    ],
-    images: [
-      "https://scontent-jnb2-1.cdninstagram.com/v/t39.30808-6/612239496_1309853034520649_1879133359085787814_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MzgwNDEwOTYzNzYxMjgyMDUwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=PFtFc4rV1PkQ7kNvwE_w-wA&_nc_oc=AdksL5VfjN098Iv_NFGmMfU74QOs-RNatE-LCk7K0nLapVSNV9VuWZQlvlNHYEcQsM0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-jnb2-1.cdninstagram.com&_nc_gid=8yw4cMy_yCA5PnEAP5aViA&oh=00_AfuCcDBmBJmg6Ry_aHEXA9dqiVtIaLuhaG9zPFluP0bCyw&oe=698CA9C0",
-      "https://images.unsplash.com/photo-16180446125-6c8c4c0d5a8d?w-800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    ],
+    technologies: ["Python DJANGO", "REST APIs"],
+    images: [paybridge, pinprompt, receipt],
     outcomes: [
-      "Reduced transaction processing time by 70%",
-      "Achieved 99.99% system availability",
-      "Scaled to handle 100,000+ daily transactions",
       "Reduced integration time for new merchants from 3 weeks to 3 days",
     ],
   },
@@ -166,82 +151,40 @@ const projects = [
       "https://img.freepik.com/free-photo/medic-holding-radiography-examination-with-patient-coronavirus-pandemic-doctor-explaining-x-ray-scan-results-diagnosis-woman-wearing-face-masks-protection_482257-42641.jpg?t=st=1771070627~exp=1771074227~hmac=1dd3b3522673b5b97ed6a5957b2adba2e7fe7fbd8cba6f494540b143553b60ec&w=1060",
     tags: ["Celery", "Redis", "PostgreSQL"],
     detailedDescription: [
-      "Developed a full-stack CRM solution serving over 5,000 users across multiple departments.",
-      "Integrated with ERPNext for seamless data synchronization between CRM and ERP systems.",
-      "Implemented real-time chat functionality using WebSockets for customer support teams.",
-      "Built advanced analytics dashboard with customizable reports and data visualization.",
-      "Created mobile-responsive design that works across all device types.",
+      "Pneumoconiosis Detection System is an AI-powered chest X-ray analysis system designed to help mining and industrial companies detect early signs of pneumoconiosis across their workforce, automatically, accurately, and at scale. By simply uploading a batch of zipped X-ray images, PneumoScan handles the rest: extracting, scanning, and analysing every image before generating a clear, actionable report identifying individuals who are likely showing signs of the disease.",
+      "No manual review. No bottlenecks. Just fast, reliable insights that help you act before it's too late.",
     ],
     challenges: [
-      "Synchronizing data between multiple third-party systems in real-time",
-      "Handling large datasets with optimal performance",
-      "Implementing role-based access control across complex organizational structures",
+      "Unreliable OCR on Poor Quality X-Ray Images - One of the most persistent challenges was that OCR consistently failed to reliably extract critical patient information such as ID numbers and names from low quality or poorly labelled X-ray images. To ensure no record was left unidentified, the system was designed to gracefully fall back to using the image filename, typically the employee's name as the identifier, maintaining report continuity.",
     ],
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "Socket.io",
-      "Material-UI",
-      "Chart.js",
-      "Docker",
-      "AWS",
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    ],
+    technologies: ["Python", "OpenCV", "TensorFlow", "Keras"],
+    images: [results, upload, worker],
     outcomes: [
-      "Increased sales team productivity by 40%",
-      "Reduced customer response time by 60%",
-      "Improved data accuracy across departments",
-      "Scaled to support 5,000+ concurrent users",
+      "Successfully detects early visual indicators of pneumoconiosis",
+      "Reduces human error associated with manual X-ray review ",
     ],
   },
   {
     id: 3,
     title: "Carpooling Application",
     description:
-      "A smart carpooling application that matches drivers and passengers heading the same way—saving money, reducing traffic, cutting emissions, and building community through shared daily commutes.",
+      "A smart carpooling application that matches drivers and passengers heading the same way, saving money, reducing traffic, cutting emissions, and building community through shared daily commutes.",
     image:
       "https://img.freepik.com/free-photo/mobile-app-location-digital-art_23-2151762839.jpg?t=st=1771068967~exp=1771072567~hmac=370ba06cfc5e605aa20de4d78a227d415d99f665f2fbe9c793f0ae977a969fca&w=1480",
     tags: ["React Native", "DJANGO", "PostgreSQL"],
     detailedDescription: [
-      "Architected and built an API orchestration platform that manages communication between 20+ microservices.",
-      "Implemented circuit breaker pattern for improved fault tolerance and system resilience.",
-      "Created API gateway with rate limiting, authentication, and request logging capabilities.",
-      "Developed service discovery and load balancing mechanisms for optimal resource utilization.",
-      "Built comprehensive monitoring and alerting system using Prometheus and Grafana.",
+      "Carpooling Application is a smart mobile carpooling application for iOS and Android that intelligently matches drivers and passengers travelling in the same direction,  transforming everyday commutes into shared, cost-effective, and environmentally conscious journeys. By connecting people heading the same way, RideSync makes daily travel cheaper, roads less congested, and communities more connected. One shared ride at a time.",
     ],
     challenges: [
-      "Managing service dependencies and avoiding cascading failures",
-      "Ensuring data consistency across distributed systems",
-      "Implementing effective rate limiting without impacting legitimate traffic",
+      "Building and Consuming a Cross-Platform REST API Between Django and React Native. One of the most significant technical challenges was architecting a robust backend using Django REST Framework and ensuring seamless communication between it and the React Native mobile application. Bridging two distinct technology ecosystems introduced complexities around authentication token handling, data serialization, CORS configuration, and managing asynchronous API calls on the mobile side. Ensuring that every endpoint responded consistently and efficiently, across varying network conditions on a mobile device required careful API design, thorough error handling, and continuous testing across both ends of the stack.",
     ],
-    technologies: [
-      "Spring Cloud",
-      "Netflix OSS",
-      "Kubernetes",
-      "Docker",
-      "Redis",
-      "RabbitMQ",
-      "Prometheus",
-      "Grafana",
-      "ELK Stack",
-    ],
+    technologies: ["React Native", "DJANO", "PostgreSQL"],
     images: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      carpooling,
       "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
     ],
-    outcomes: [
-      "Reduced API integration time by 60%",
-      "Achieved 99.95% system availability",
-      "Improved system response time by 40%",
-      "Reduced infrastructure costs by 30% through better resource utilization",
-    ],
+    outcomes: ["Reduced Environmental Footprint"],
   },
 ];
 

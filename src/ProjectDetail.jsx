@@ -216,12 +216,12 @@ const ProjectDetail = ({ projects }) => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Duration</span>
-                    <span className="text-white font-semibold">6 Months</span>
+                    <span className="text-white font-semibold">2 weeks</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Team Size</span>
                     <span className="text-white font-semibold">
-                      5 Developers
+                      1 Developer
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
