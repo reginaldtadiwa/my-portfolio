@@ -126,7 +126,7 @@ const projects = [
     description:
       "PayBridge is a lightweight Python plugin that simplifies OneMoney payment integration, enabling merchant technical teams to embed a fully functional checkout experience with minimal configuration",
     image:
-      "https://img.freepik.com/free-photo/mobile-payment-technology_23-2151961280.jpg?t=st=1771069190~exp=1771072790~hmac=844281fabba33c0e4f5edc6e0b21a6b767ae1e4230da588dbc0df7a60ad9ee15&w=1480",
+      "https://img.freepik.com/free-photo/mobile-payment-technology_23-2151961280.jpg",
     tags: ["Python", "SQLite", "REST"],
     // Additional details for the project detail page
     detailedDescription: [
@@ -148,7 +148,7 @@ const projects = [
     description:
       "An automated system that scans chest X-ray image batches and generates reports identifying individuals likely to have pneumoconiosis",
     image:
-      "https://img.freepik.com/free-photo/medic-holding-radiography-examination-with-patient-coronavirus-pandemic-doctor-explaining-x-ray-scan-results-diagnosis-woman-wearing-face-masks-protection_482257-42641.jpg?t=st=1771070627~exp=1771074227~hmac=1dd3b3522673b5b97ed6a5957b2adba2e7fe7fbd8cba6f494540b143553b60ec&w=1060",
+      "https://img.freepik.com/free-photo/medic-holding-radiography-examination-with-patient-coronavirus-pandemic-doctor-explaining-x-ray-scan-results-diagnosis-woman-wearing-face-masks-protection_482257-42641.jpg",
     tags: ["Celery", "Redis", "PostgreSQL"],
     detailedDescription: [
       "Pneumoconiosis Detection System is an AI-powered chest X-ray analysis system designed to help mining and industrial companies detect early signs of pneumoconiosis across their workforce, automatically, accurately, and at scale. By simply uploading a batch of zipped X-ray images, PneumoScan handles the rest: extracting, scanning, and analysing every image before generating a clear, actionable report identifying individuals who are likely showing signs of the disease.",
@@ -170,7 +170,7 @@ const projects = [
     description:
       "A smart carpooling application that matches drivers and passengers heading the same way, saving money, reducing traffic, cutting emissions, and building community through shared daily commutes.",
     image:
-      "https://img.freepik.com/free-photo/mobile-app-location-digital-art_23-2151762839.jpg?t=st=1771068967~exp=1771072567~hmac=370ba06cfc5e605aa20de4d78a227d415d99f665f2fbe9c793f0ae977a969fca&w=1480",
+      "https://img.freepik.com/free-photo/mobile-app-location-digital-art_23-2151762839.jpg",
     tags: ["React Native", "DJANGO", "PostgreSQL"],
     detailedDescription: [
       "Carpooling Application is a smart mobile carpooling application for iOS and Android that intelligently matches drivers and passengers travelling in the same direction,  transforming everyday commutes into shared, cost-effective, and environmentally conscious journeys. By connecting people heading the same way, RideSync makes daily travel cheaper, roads less congested, and communities more connected. One shared ride at a time.",
@@ -178,7 +178,7 @@ const projects = [
     challenges: [
       "Building and Consuming a Cross-Platform REST API Between Django and React Native. One of the most significant technical challenges was architecting a robust backend using Django REST Framework and ensuring seamless communication between it and the React Native mobile application. Bridging two distinct technology ecosystems introduced complexities around authentication token handling, data serialization, CORS configuration, and managing asynchronous API calls on the mobile side. Ensuring that every endpoint responded consistently and efficiently, across varying network conditions on a mobile device required careful API design, thorough error handling, and continuous testing across both ends of the stack.",
     ],
-    technologies: ["React Native", "DJANO", "PostgreSQL"],
+    technologies: ["React Native", "DJANGO", "PostgreSQL"],
     images: [
       carpooling,
       "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop",
@@ -231,7 +231,12 @@ function Portfolio() {
   };
 
   const handleViewDetails = (projectId) => {
-    navigate(`/project/${projectId}`);
+    // Check if it's the Carpooling Application (id 3)
+    if (projectId === 3) {
+      alert("📝 Documentation still in progress. Check back soon!");
+    } else {
+      navigate(`/project/${projectId}`);
+    }
   };
 
   const navItems = ["home", "about", "projects"];
@@ -272,7 +277,7 @@ function Portfolio() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/reginald-chikumbu-6657221bb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
@@ -358,22 +363,6 @@ function Portfolio() {
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
       >
-        {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animation: `float ${5 + Math.random() * 10}s linear infinite`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
-
         <div className="w-full px-6 text-center relative z-10">
           <h1 className="text-6xl md:text-7xl font-bold mb-6 text-blue-400">
             Software Engineer &
@@ -402,12 +391,6 @@ function Portfolio() {
         id="about"
         className="min-h-screen flex items-center py-20 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden"
       >
-        {/* Background decoration */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
-        </div>
-
         <div className="w-full px-6 relative z-10">
           <h2 className="text-5xl font-bold mb-4 text-blue-400">My Journey</h2>
           <p className="text-gray-400 mb-16 text-lg">
@@ -418,7 +401,6 @@ function Portfolio() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {/* Cards remain the same as before */}
             <div className="group relative bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 hover:transform hover:-translate-y-2">
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-xl"></div>
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-3">
                 System Integration
@@ -431,7 +413,6 @@ function Portfolio() {
             </div>
 
             <div className="group relative bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 hover:transform hover:-translate-y-2">
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-xl"></div>
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">
                 Problem Solver
@@ -444,7 +425,6 @@ function Portfolio() {
             </div>
 
             <div className="group relative bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 hover:transform hover:-translate-y-2">
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20 group-hover:opacity-30 transition-opacity blur-xl"></div>
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">
                 Scale Builder
@@ -557,7 +537,7 @@ function Portfolio() {
           </p>
           <div className="flex justify-center gap-6 mb-6">
             <a
-              href="https://github.com"
+              href="https://github.com/reginaldtadiwa"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
@@ -573,7 +553,7 @@ function Portfolio() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:reginaldtadiwa2@.com"
               className="hover:text-blue-400 transition-colors"
             >
               <Mail size={24} />
